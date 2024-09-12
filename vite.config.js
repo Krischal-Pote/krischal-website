@@ -9,4 +9,5 @@ export default defineConfig({
       external: ["svelte-navigator"],
     },
   },
+  optimizeDeps: { exclude: ["svelte-navigator"] },
 });
