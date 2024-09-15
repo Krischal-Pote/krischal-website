@@ -2,7 +2,7 @@
   let WorkingData = [
     {
       title: "Program Coordinator (Intern)",
-      logo: "../public/logo/deerwalk_compware_ltd_logo.jpeg",
+      logo: "/logo/deerwalk_compware_ltd_logo.jpeg",
       company: "Deerwalk Compware Ltd. ",
       dateStart: "2022-07-01",
       dateEnd: "2022-11-05",
@@ -13,12 +13,12 @@
       company: "Young Minds",
       dateStart: "2022-12-11",
       dateEnd: "2023-01-26",
-      logo: "../public/logo/download.png",
+      logo: "/logo/download.png",
       url: "https://www.youngminds.com.np/",
     },
     {
       title: "Associate Software Engineer",
-      logo: "../public/logo/hamropatro.png",
+      logo: "/logo/hamropatro.png",
       company: "Hamro Patro ",
       dateStart: "2023-02-01",
       dateEnd: "PRESENT",

@@ -9,7 +9,11 @@
     </small>
 
     <small class="hover:text-white duration-200">
-      <a href="#" target="_blank" rel="noreferrer noopener">
+      <a
+        href="https://github.com/Krischal-Pote"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         Prepared by <span class="text-green-400">Krischal Om Pote</span>
       </a>
     </small>

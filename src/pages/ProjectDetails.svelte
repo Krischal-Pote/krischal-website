@@ -30,7 +30,7 @@
         class="rounded-xl border border-zinc-800"
         width={900}
         height={460}
-        src="../../public/okok.png"
+        src="/okok.png"
         alt="Bank Rates"
       />
 
@@ -83,7 +83,7 @@
         class="rounded-xl border border-zinc-800"
         width={900}
         height={460}
-        src="../../public/health photo.png"
+        src="/health photo.png"
         alt="Hamro Health"
       />
 
@@ -137,7 +137,7 @@
         class="rounded-xl border border-zinc-800"
         width={900}
         height={460}
-        src="../../public/jyotish photo.png"
+        src="/jyotish photo.png"
         alt="Hamro Jyotish"
       />
 
