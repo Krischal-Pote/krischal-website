@@ -1,9 +1,11 @@
 <script>
-  import { useParams } from "svelte-navigator";
-
-  const params = useParams();
-  let { id } = $params;
-  console.log("id", id);
+  import { onMount } from "svelte";
+  let id;
+  onMount(() => {
+    const path = location.pathname;
+    const parts = path.split("/");
+    id = parts[parts.length - 1];
+  });
 </script>
 
 {#if id === "1"}

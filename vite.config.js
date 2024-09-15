@@ -10,4 +10,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: { exclude: ["svelte-navigator"] },
+  server: {
+    historyApiFallback: true,
+  },
 });
