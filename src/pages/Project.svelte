@@ -18,6 +18,11 @@
       projectName: "Hamro Jytoish",
       imageUrl: "/logo/neww.png",
     },
+    {
+      id: 4,
+      projectName: "Hamro Jytoish",
+      imageUrl: "/logo/Letsread.png",
+    },
   ];
 </script>
 

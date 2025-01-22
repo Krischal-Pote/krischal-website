@@ -163,4 +163,50 @@
       </div>
     </div>
   </main>
+{:else if id === "4"}
+  <main class="max-w-6xl mx-auto lg:px-16 px-8">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex items-start justify-between mb-4 outline-none">
+        <h1
+          class="font-bold lg:text-5xl text-3xl lg:leading-tight mb-4 outline-none"
+        >
+          Let's Read
+        </h1>
+        <a
+          href="https://www.letsreadasia.org/"
+          rel="noreferrer noopener"
+          class="bg-[#1d1d20] text-white hover:border-zinc-700 border border-transparent rounded-md px-4 py-2"
+        >
+          Explore
+        </a>
+      </div>
+
+      <img
+        class="rounded-xl border border-zinc-800"
+        width={900}
+        height={460}
+        src="/letsread_homepage.png"
+        alt="Let's Read"
+      />
+
+      <div class="flex flex-col gap-y-6 mt-8 leading-7 text-zinc-400">
+        <ul style="list-style-type: disc; padding-left: 20px;">
+          <li>
+            Letter Tracing Integration: Designed and implemented a feature to
+            letter tracing for the users.
+          </li>
+          <li>
+            Attractive English Decodables Landing Page: Created visually
+            appealing landing page for english decodables, adding 30 english
+            decodables books from around 10 countries
+          </li>
+          <li>
+            English Decodables Page Builder: Made a page builder for english
+            decodables, allowing super users to customize the layout and content
+            of there choose.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
 {/if}
