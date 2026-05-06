@@ -3,7 +3,7 @@
   import Job from "../components/Job.svelte";
   import ProfileImage from "../../public/profile.png";
 
-  let posts = ["Full Stack Developer", "Frontend Engineer", "Software Engineer"];
+  let posts = ["Full Stack Developer", "Frontend Engineer", "Software Engineer","Backend Engineer"];
   let currentPost = "";
   let postIndex = 0;
   let letterIndex = 0;
@@ -18,7 +18,6 @@
 
   onMount(() => {
     typeWriter();
-    // Scroll reveal
     const reveals = document.querySelectorAll(".reveal");
     const obs = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); } }),

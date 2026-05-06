@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
   type ProjectKey = "1" | "2" | "3" | "4";
 
   export let id: string | undefined = undefined;
@@ -58,16 +60,23 @@
       ],
     },
   };
+ onMount(() => {
+    if (!id) {
+      const parts = location.pathname.split("/");
+      const raw = parts[parts.length - 1];
+      if (raw in projects) {
+        id = raw;
+      }
+    }
+  });
 
-  // Cast safely — only look up if id is a valid key
-  $: project = id && id in projects ? projects[id as ProjectKey] : undefined;
+  $: project = id && (id in projects) ? projects[id as ProjectKey] : undefined;
 </script>
 
 {#if project}
 <main class="page-wrap">
-  <div class="project-detail reveal">
+ <div class="project-detail">
 
-    <!-- Header -->
     <div class="detail-header">
       <div>
         <div class="section-label">// Project</div>
@@ -84,12 +93,10 @@
       </a>
     </div>
 
-    <!-- Image -->
     <div class="detail-image-wrap">
       <img src={project.image} alt={project.title} class="detail-image" />
     </div>
 
-    <!-- Features -->
     <div class="features-section">
       <div class="features-label">// Features & Contributions</div>
       <ul class="features-list">
@@ -106,7 +113,6 @@
       </ul>
     </div>
 
-    <!-- Back -->
     <a href="/projects" class="back-link">← Back to Projects</a>
   </div>
 </main>

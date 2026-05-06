@@ -1,11 +1,20 @@
 <script>
   let WorkingData = [
+      {
+      title: "Software Engineer Lead",
+      logo: "/logo/astergazelogo.svg",
+      company: "Aster Gaze",
+      dateStart: "Aug 2025",
+      dateEnd: "Present",
+      url: "https://astergaze.com/",
+      desc: "Our approach hasn't changed: we still treat every project like it's our own. We still care more about solving real problems than following trends. And we still believe the best products come from teams that genuinely care about the people using them",
+    },
     {
-      title: "Associate Software Engineer",
+      title: "Software Engineer",
       logo: "/logo/hamropatro.png",
       company: "Hamro Patro",
       dateStart: "Feb 2023",
-      dateEnd: "PRESENT",
+      dateEnd: "Feb 2025",
       url: "https://www.hamropatro.com/",
       desc: "Building and shipping features for Hamro Patro's web ecosystem — including Bank Rates, Hamro Health, Hamro Jyotish, and Let's Read — using React, Svelte, and PHP.",
     },
@@ -89,7 +98,12 @@
     background: #121820;
     flex-shrink: 0;
   }
-  .exp-logo img { width: 100%; height: 100%; object-fit: cover; }
+  .exp-logo img { 
+ width: 100%; 
+  height: 100%; 
+  object-fit: contain;  
+  padding: 6px; 
+   }
   .exp-company {
     font-family: var(--font-mono);
     font-size: 0.7rem;
