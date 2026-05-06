@@ -121,6 +121,7 @@
     max-width: 95rem;
     margin: 0 auto;
     padding: 0 4rem;
+    overflow-x: hidden;
     padding-top: 8rem;
   }
 
@@ -323,6 +324,7 @@
     padding: 1.25rem 1.5rem;
     display: flex;
     align-items: center;
+    grid-column: 1 / -1;
     justify-content: space-around;
   }
   .stat { text-align: center; }
@@ -363,5 +365,7 @@
   .page-wrap { padding: 0 1.5rem; padding-top: 6rem; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .profile-img { max-width: 100%; height: 260px; }
+  .hero::after { display: none; }
+  .stats-row { grid-column: 1 / -1; }
 }
 </style>
