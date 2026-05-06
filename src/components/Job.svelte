@@ -1,68 +1,124 @@
 <script>
   let WorkingData = [
     {
-      title: "Program Coordinator (Intern)",
-      logo: "/logo/deerwalk_compware_ltd_logo.jpeg",
-      company: "Deerwalk Compware Ltd. ",
-      dateStart: "2022-07-01",
-      dateEnd: "2022-11-05",
-      url: "https://www.deerwalkcompware.com/",
+      title: "Associate Software Engineer",
+      logo: "/logo/hamropatro.png",
+      company: "Hamro Patro",
+      dateStart: "Feb 2023",
+      dateEnd: "PRESENT",
+      url: "https://www.hamropatro.com/",
+      desc: "Building and shipping features for Hamro Patro's web ecosystem — including Bank Rates, Hamro Health, Hamro Jyotish, and Let's Read — using React, Svelte, and PHP.",
     },
     {
       title: "Laravel Developer (Intern)",
       company: "Young Minds",
-      dateStart: "2022-12-11",
-      dateEnd: "2023-01-26",
+      dateStart: "Dec 2022",
+      dateEnd: "Jan 2023",
       logo: "/logo/download.png",
       url: "https://www.youngminds.com.np/",
+      desc: "Developed backend features using Laravel, contributed to internal tools and REST API design.",
     },
     {
-      title: "Associate Software Engineer",
-      logo: "/logo/hamropatro.png",
-      company: "Hamro Patro ",
-      dateStart: "2023-02-01",
-      dateEnd: "PRESENT",
-      url: "https://www.hamropatro.com/",
+      title: "Program Coordinator (Intern)",
+      logo: "/logo/deerwalk_compware_ltd_logo.jpeg",
+      company: "Deerwalk Compware Ltd.",
+      dateStart: "Jul 2022",
+      dateEnd: "Nov 2022",
+      url: "https://www.deerwalkcompware.com/",
+      desc: "Coordinated tech programs and assisted in internal project management and development workflows.",
     },
   ];
 </script>
 
-<section class="mt-32">
-  <div class="mb-16 flex justify-center">
-    <h2 class="font-semibold text-4xl mb-4">Work Experience</h2>
+<section class="exp-section">
+  <div class="exp-header reveal">
+    <div class="section-label">// Experience</div>
+    <h2 class="section-title">Where I've Worked</h2>
   </div>
 
-  <div class="w-[100%] flex justify-center">
-    <div class="flex flex-col gap-y-12">
-      {#each WorkingData as job}
-        <div
-          class="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-zinc-800"
-        >
-          <a
-            href={job.url}
-            rel="noreferrer noopener"
-            class="min-h-[60px] min-w-[60px] rounded-md overflow-clip relative"
-          >
-            <img
-              src={job.logo}
-              class="object-cover"
-              alt={` logo`}
-              width="60px"
-            />
-          </a>
-          <div class="flex flex-col items-start">
-            <h3 class="text-xl font-bold">{job.company}</h3>
-            <p>{job.title}</p>
-            <small class="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
-              {job.dateStart} -{" "}
-              {job.dateEnd}
-            </small>
-            <p class="text-base text-zinc-400 my-4">
-              <!-- {data.description} -->
-            </p>
-          </div>
+  <div class="exp-list reveal">
+    {#each WorkingData as job}
+      <div class="exp-item">
+        <a href={job.url} target="_blank" rel="noreferrer noopener" class="exp-logo">
+          <img src={job.logo} alt={job.company} width="48" height="48" />
+        </a>
+        <div class="exp-content">
+          <div class="exp-company">{job.company}</div>
+          <div class="exp-role">{job.title}</div>
+          <div class="exp-desc">{job.desc}</div>
         </div>
-      {/each}
-    </div>
+        <div class="exp-date">{job.dateStart} — {job.dateEnd}</div>
+      </div>
+    {/each}
   </div>
 </section>
+
+<style>
+  .exp-section {
+    padding: 5rem 0;
+  }
+  .exp-header {
+    margin-bottom: 2.5rem;
+  }
+  .exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .exp-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1.75rem 2rem;
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    gap: 1.5rem;
+    align-items: start;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .exp-item:hover {
+    border-color: rgba(74,240,162,0.3);
+    transform: translateX(4px);
+  }
+  .exp-logo {
+    width: 48px; height: 48px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    background: #121820;
+    flex-shrink: 0;
+  }
+  .exp-logo img { width: 100%; height: 100%; object-fit: cover; }
+  .exp-company {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+  .exp-role {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+  .exp-desc {
+    font-size: 0.84rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+  .exp-date {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 0.25rem;
+  }
+
+  @media (max-width: 640px) {
+    .exp-item { grid-template-columns: 40px 1fr; }
+    .exp-date { grid-column: 2; margin-top: -0.5rem; }
+  }
+</style>
