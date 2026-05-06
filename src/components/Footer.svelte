@@ -1,21 +1,44 @@
-<script></script>
+<script>
+  const year = new Date().getFullYear();
+</script>
 
-<footer class="border-t border-[#9F9587] mt-44">
-  <div
-    class="max-w-7xl mx-auto flex lg:flex-row flex-col items-center lg:justify-between justify-center gap-y-4 md:px-16 px-6 py-16 text-zinc-400"
-  >
-    <small class=" duration-200 font-mono">
-      All rights reserved &copy; {new Date().getFullYear()}
-    </small>
-
-    <small class="hover:text-white duration-200">
-      <a
-        href="https://github.com/Krischal-Pote"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        Prepared by <span class="text-green-400">Krischal Om Pote</span>
+<footer>
+  <div class="footer-inner">
+    <small>All rights reserved &copy; {year}</small>
+    <small>
+      <a href="https://github.com/Krischal-Pote" target="_blank" rel="noreferrer noopener">
+        Designed & built by <span>Krischal Om Pote</span>
       </a>
     </small>
   </div>
 </footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 6rem;
+    padding: 2rem 4rem;
+  }
+  .footer-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  small {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--text); }
+  span { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    footer { padding: 2rem 1.5rem; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+</style>
