@@ -13,12 +13,11 @@
 
 <header class="nav" class:scrolled>
   <div class="nav-inner">
-    <Link to="/" class="nav-logo">K<span>.</span>OP</Link>
+    <Link to="/" class="nav-logo">KOP<span>.</span>COM</Link>
     <nav>
       <ul class="nav-links">
         <li><Link to="/about">About</Link></li>
         <li><Link to="/projects">Projects</Link></li>
-        <li><a href="mailto:crischal1234@gmail.com" class="nav-cta">Hire Me</a></li>
       </ul>
     </nav>
   </div>

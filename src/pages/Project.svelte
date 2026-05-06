@@ -8,7 +8,7 @@
       projectName: "Hamro Patro Bank Rates",
       desc: "Bank rates viewer, scheme comparison, EMI calculator and investment doubling tools for Nepali banks.",
       imageUrl: "/logo/logo bank rate.png",
-      tags: ["React", "PHP", "REST API"],
+      tags: ["React", "REST API"],
       url: "https://bank-rates.hamropatro.com/",
     },
     {
@@ -16,7 +16,7 @@
       projectName: "Hamro Health",
       desc: "Healthcare app with doctor profile sharing via QR code, user preference customization, and clipboard copy.",
       imageUrl: "/logo/health.png",
-      tags: ["React", "QR Code", "UX"],
+      tags: ["React", "REST API", "UX"],
       url: "https://health.hamropatro.com/",
     },
     {
@@ -24,7 +24,7 @@
       projectName: "Hamro Jyotish",
       desc: "Astrology platform with testimonial integration, attractive layouts, and direct Jyotish expert call feature.",
       imageUrl: "/logo/neww.png",
-      tags: ["Svelte", "PHP"],
+      tags: ["React", "JAVA"],
       url: "https://jyotishsewa.hamropatro.com/j_c_np",
     },
     {
@@ -32,7 +32,7 @@
       projectName: "Let's Read",
       desc: "Children's literacy app with letter tracing, English Decodables landing page, and a custom page builder for super users.",
       imageUrl: "/logo/Letsread.png",
-      tags: ["React", "Page Builder", "Education"],
+      tags: ["React", "JAVA", "CMS"],
       url: "https://www.letsreadasia.org/",
     },
   ];

@@ -1,8 +1,14 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
-  let id;
 
-  const projects = {
+  type ProjectKey = "1" | "2" | "3" | "4";
+
+  export let id: string | undefined = undefined;
+
+  const projects: Record<ProjectKey, {
+    title: string; url: string; image: string;
+    tags: string[]; summary: string; points: string[];
+  }> = {
     "1": {
       title: "Hamro Patro Bank Rates",
       url: "https://bank-rates.hamropatro.com/",
@@ -54,21 +60,23 @@
       ],
     },
   };
-
-  onMount(() => {
-    const path = location.pathname;
-    const parts = path.split("/");
-    id = parts[parts.length - 1];
+ onMount(() => {
+    if (!id) {
+      const parts = location.pathname.split("/");
+      const raw = parts[parts.length - 1];
+      if (raw in projects) {
+        id = raw;
+      }
+    }
   });
 
-  $: project = projects[id];
+  $: project = id && (id in projects) ? projects[id as ProjectKey] : undefined;
 </script>
 
 {#if project}
 <main class="page-wrap">
-  <div class="project-detail reveal">
+ <div class="project-detail">
 
-    <!-- Header -->
     <div class="detail-header">
       <div>
         <div class="section-label">// Project</div>
@@ -85,12 +93,10 @@
       </a>
     </div>
 
-    <!-- Image -->
     <div class="detail-image-wrap">
       <img src={project.image} alt={project.title} class="detail-image" />
     </div>
 
-    <!-- Features -->
     <div class="features-section">
       <div class="features-label">// Features & Contributions</div>
       <ul class="features-list">
@@ -107,7 +113,6 @@
       </ul>
     </div>
 
-    <!-- Back -->
     <a href="/projects" class="back-link">← Back to Projects</a>
   </div>
 </main>
