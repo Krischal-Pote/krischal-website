@@ -48,14 +48,9 @@
 </script>
 
 <main class="page-wrap">
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-left">
-      <div class="hero-tag">
-        <span class="tag-dot"></span>
-        Available for new opportunities
-      </div>
-
+   
       <h1 class="hero-name">
         <span class="typewriter">{currentPost}<span class="caret">|</span></span>
       </h1>
@@ -84,10 +79,6 @@
     <div class="hero-right">
       <div class="profile-wrap">
         <img src={ProfileImage} alt="Krischal Om Pote" class="profile-img" width="380" height="460" />
-        <div class="profile-badge">
-          <span class="badge-dot"></span>
-          Open to work
-        </div>
       </div>
 
       <div class="stack-card">
@@ -98,24 +89,23 @@
           {/each}
         </div>
       </div>
-
-      <div class="stats-row">
-        <div class="stat">
-          <div class="stat-n">3+</div>
-          <div class="stat-l">Years Exp.</div>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat">
-          <div class="stat-n">10+</div>
-          <div class="stat-l">Projects</div>
-        </div>
-        <div class="stat-div"></div>
-        <div class="stat">
-          <div class="stat-n">3</div>
-          <div class="stat-l">Companies</div>
-        </div>
-      </div>
     </div>
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-n">3+</div>
+            <div class="stat-l">Years Exp.</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <div class="stat-n">10+</div>
+            <div class="stat-l">Projects</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <div class="stat-n">3</div>
+            <div class="stat-l">Companies</div>
+          </div>
+        </div>
   </section>
 
   <div class="divider"></div>
@@ -127,14 +117,14 @@
 </main>
 
 <style>
+
   .page-wrap {
-    max-width: 80rem;
+    max-width: 95rem;
     margin: 0 auto;
     padding: 0 4rem;
     padding-top: 8rem;
   }
 
-  /* HERO */
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -177,16 +167,18 @@
   }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-  .hero-name {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    line-height: 1;
-    letter-spacing: 0.02em;
-    margin-bottom: 0.5rem;
-    color: var(--accent);
-    animation: fadeUp 0.6s 0.1s ease both;
-    min-height: 5rem;
-  }
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  animation: fadeUp 0.6s 0.1s ease both;
+  /* min-height: 11rem;   */
+  display: flex;
+  align-items: flex-start;
+}
   .typewriter { display: block; }
   .caret {
     color: var(--accent2);
@@ -262,13 +254,14 @@
   }
   .btn-outline:hover { border-color: var(--text-dim); color: var(--text); }
 
-  /* RIGHT COLUMN */
-  .hero-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    animation: fadeUp 0.6s 0.35s ease both;
-  }
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;       
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: fadeUp 0.6s 0.35s ease both;
+}
 
   .profile-wrap {
     position: relative;
@@ -367,10 +360,9 @@
     to { opacity: 1; transform: none; }
   }
 
-  @media (max-width: 900px) {
-    .page-wrap { padding: 0 1.5rem; padding-top: 6rem; }
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-right { order: -1; }
-    .profile-img { max-width: 100%; height: 260px; }
-  }
+@media (max-width: 900px) {
+  .page-wrap { padding: 0 1.5rem; padding-top: 6rem; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .profile-img { max-width: 100%; height: 260px; }
+}
 </style>

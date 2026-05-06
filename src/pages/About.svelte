@@ -31,7 +31,6 @@
     <h1 class="section-title">The Person<br>Behind the Code</h1>
   </section>
 
-  <!-- PROFILE GRID -->
   <section class="profile-grid reveal">
     <div class="profile-left">
       <img src={ProfileImage} alt="Krischal Om Pote" class="profile-img" />
@@ -63,7 +62,6 @@
 
   <div class="divider"></div>
 
-  <!-- EXPERTISE -->
   <section class="expertise-section reveal">
     <div class="section-label">// Expertise</div>
     <h2 class="section-title">My Arsenal</h2>
@@ -78,7 +76,6 @@
 
   <div class="divider"></div>
 
-  <!-- SKILL BARS -->
   <section class="skills-section reveal">
     <div class="section-label">// Proficiency</div>
     <h2 class="section-title">Skill Levels</h2>
@@ -107,10 +104,8 @@
     padding: 8rem 4rem 4rem;
   }
 
-  /* HERO */
   .about-hero { margin-bottom: 4rem; }
 
-  /* PROFILE GRID */
   .profile-grid {
     display: grid;
     grid-template-columns: 320px 1fr;
@@ -164,7 +159,6 @@
   }
   .email-link:hover { color: var(--accent); }
 
-  /* BIO CARD */
   .bio-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -206,7 +200,6 @@
   }
   .bio-text :global(strong) { color: var(--text); font-weight: 500; }
 
-  /* EXPERTISE */
   .expertise-section { padding: 4rem 0; }
   .expertise-pills {
     list-style: none;
@@ -216,7 +209,6 @@
     margin-top: 2rem;
   }
 
-  /* SKILL BARS */
   .skills-section { padding: 4rem 0; }
   .skill-bars {
     display: grid;

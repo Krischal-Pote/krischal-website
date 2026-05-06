@@ -1,8 +1,12 @@
-<script>
-  import { onMount } from "svelte";
-  let id;
+<script lang="ts">
+  type ProjectKey = "1" | "2" | "3" | "4";
 
-  const projects = {
+  export let id: string | undefined = undefined;
+
+  const projects: Record<ProjectKey, {
+    title: string; url: string; image: string;
+    tags: string[]; summary: string; points: string[];
+  }> = {
     "1": {
       title: "Hamro Patro Bank Rates",
       url: "https://bank-rates.hamropatro.com/",
@@ -55,13 +59,8 @@
     },
   };
 
-  onMount(() => {
-    const path = location.pathname;
-    const parts = path.split("/");
-    id = parts[parts.length - 1];
-  });
-
-  $: project = projects[id];
+  // Cast safely — only look up if id is a valid key
+  $: project = id && id in projects ? projects[id as ProjectKey] : undefined;
 </script>
 
 {#if project}
